@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="login">
+    <div class="text-p"><p>LOGIN</p></div>
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <div class="flex-info">
+        <div class="img-icon">
+          <img class="icon-bg" src="https://ramonsenger.com/assets/icon/user-white.png" alt="">
+        </div>
+
+        <input type="text" id="username" required [(ngModel)]="loginData.username" name="username" #username="ngModel">
+      </div>
+      <div class="flex-info">
+        <div class="img-icon">
+          <img class="icon-bg" src="https://ramonsenger.com/assets/icon/user-white.png" alt="">
+        </div>
+        <input type="password" id="password" required [(ngModel)]="loginData.password" name="password" #password="ngModel">
+      </div>
+      <button type="submit" [disabled]="!loginForm.valid">Login</button>
+      <button (click)="navigateToRegistrar()">Registrar</button>
+    </form>
+
+  </div>
+</div>
